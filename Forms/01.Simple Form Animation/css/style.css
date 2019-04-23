@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(26, 26, 26);
+    position: relative;
+}
+
+.field-name,
+.field-email,
+.field-password,
+.field-finish {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 400px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.377);
+}
+.fas {
+    background: rgb(255, 157, 28);
+    line-height: 50px;
+}
+.field-name i,
+.field-email i,
+.field-password i,
+.field-finish i { 
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+input {
+    background: none;
+    border: none;
+    flex : 1;
+    height: 100%;
+    outline: none;
+    padding: 10px;
+}
+
+div.innactive {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 50%);
+}
+
+div.active {
+    opacity: 1;
+    pointer-events: all;
+    transform: translate(-50%, -50%);
+}
+input::placeholder {
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+@keyframes shake {
+0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+25% {
+    transform: translate(-50%, -50%) rotate(10deg);
+}
+50% {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+75% {
+    transform: translate(-50%, -50%) rotate(-10deg);
+}
+100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+}
